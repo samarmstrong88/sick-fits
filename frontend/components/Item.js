@@ -17,11 +17,13 @@ export default class Item extends Component {
     // if (item.length < 1) return <p>No item found</p>;
     return (
       <ItemStyles>
-        {item.image && <img src={item.image} alt={item.title} />}
         <Link href={{ pathname: "/item", query: { id: item.id } }}>
-          <a>
-            <Title>{item.title}</Title>
-          </a>
+          <div>
+            <a>
+              {item.image && <img src={item.image} alt={item.title} />}
+            </a>
+            <Title><a>{item.title}</a></Title>
+          </div>
         </Link>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
         <p>{item.description}</p>
@@ -32,7 +34,7 @@ export default class Item extends Component {
           <button>Add To Cart</button>
           <DeleteItem id={this.props.item.id}>Delete</DeleteItem>
         </div>
-      </ItemStyles>
+      </ItemStyles >
     );
   }
 }

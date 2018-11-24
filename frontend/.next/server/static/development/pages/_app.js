@@ -436,7 +436,7 @@ var theme = {
   lightgrey: "#E1E1E1",
   offWhite: "#E1E1E1",
   maxWidth: "1000px",
-  bs: "0 12px 24px 1 rgba(0,0,0,0.9)"
+  bs: "0 12px 24px 0 rgba(140,140,140,0.9)"
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Page__StyledPage",

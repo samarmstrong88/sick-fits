@@ -1,5 +1,5 @@
 #endpoint: ${env:PRISMA_ENDPOINT}
-endpoint: https://us1.prisma.sh/sam-armstrong/backend/dev
+endpoint: https://us1.prisma.sh/sam-armstrong/sick-fits/dev
 datamodel: datamodel.prisma
 # secret:${env:PRISMA_SECRET}
 hooks:

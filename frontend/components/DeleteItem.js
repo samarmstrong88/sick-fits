@@ -36,7 +36,7 @@ export default class DeleteItem extends Component {
     );
     cache.writeQuery({ query: ALL_ITEMS_QUERY, data });
 
-    // console.log(update_data);
+
     cache.write;
     // remove the deleted file from cache
     //push data to cache
@@ -44,7 +44,7 @@ export default class DeleteItem extends Component {
 
   render() {
     return (
-      // <div>test</div>
+
       <Mutation
         mutation={DELETE_ITEM_MUTATION}
         variables={{ id: this.props.id }}

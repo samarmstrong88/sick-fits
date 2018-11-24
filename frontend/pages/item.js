@@ -1,41 +1,12 @@
-import React, { Component } from "react";
-import { Query, Mutation } from "react-apollo";
-import gql from "graphql-tag";
-import Item from "../components/Item";
-import { SINGLE_ITEM_QUERY } from "../components/UpdateItem";
+import SingleItem from '../components/SingleItem';
+// item pulls the query from the global queryProvider and passes it to the SingleItem element
+const item = ({ query }) => {
 
-
-// const SINGLE_ITEM_QUERY = gql`
-//   query SINGLE_ITEM_QUERY($id: ID!) {
-//     item(where: { id: $id }) {
-//       id
-//       title
-//       description
-//       price
-//     }
-//   }
-// `;
-
-class item extends Component {
-  render() {
-    return (
-      < Query query={SINGLE_ITEM_QUERY} variables={{ id: this.props.query.id }}>{
-        ({ data, loading, error }) => {
-          if (loading) return <div>Loading...</div>
-          if (error) return <Error error={error} />
-          console.log(data);
-          return <Item item={data.item} />
-        }
-      }
-      </Query >
-
-
-    );
-  }
+  return (
+    < div >
+      < SingleItem id={query.id} />
+    </div >
+  )
 }
-
-// const item = () => {
-//   return <p>item</p>
-// }
 
 export default item;
